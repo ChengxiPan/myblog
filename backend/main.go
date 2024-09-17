@@ -19,6 +19,7 @@ func main() {
 	r.Use(cors.Default())
 
 	r.POST("/api/auth/register", controller.UserRegister)
+	r.POST("/api/auth/login", controller.UserLogin)
 	// r.POST("/login", controller.UserLogin)
 
 	port := viper.GetString("server.port")
